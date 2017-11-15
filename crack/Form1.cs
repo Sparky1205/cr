@@ -121,7 +121,7 @@ namespace crack
 
         }
 
-        private string[] translate()
+        private string[] translate(string[] alf1)
         {
             string[] res = new string[kol];
             
@@ -179,6 +179,14 @@ namespace crack
             return res;
         }
 
+        private string[] newalf()
+        {
+            string[] res = new string[alf.Length];
+
+
+            return res;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             string[] word;
@@ -189,10 +197,10 @@ namespace crack
                 //подсчитывает количество по каждой букве выводит алфавит по максимальному количеству букв
                 string[] res = search();
 
-                //цикл для изменения букв (алфавита)
-
+            //цикл для изменения букв (алфавита)
+            string[] alf1 = newalf();
                 //переводит новым алфавитом исходный текст
-                string[] tr = translate();
+                string[] tr = translate(alf1);
 
             //получить слово
             word = ser(tr);
